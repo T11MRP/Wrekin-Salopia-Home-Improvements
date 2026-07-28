@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wrekin &amp; Salopia Home Improvements | Roofers in Shrewsbury, Shropshire</title>
+<meta name="description" content="Wrekin &amp; Salopia Home Improvements are Shrewsbury roofers — pitched roofs, flat roofs, fascias, soffits and guttering, chimneys and leadwork, glazing and bathrooms. Built on Reputation.">
+<link rel="icon" href="images/icon-yellow.png">
+<link rel="preload" href="fonts/Barlow-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/BarlowCondensed-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'Barlow';src:url('fonts/Barlow-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Barlow';src:url('fonts/Barlow-Medium.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'Barlow';src:url('fonts/Barlow-SemiBold.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:'Barlow';src:url('fonts/Barlow-Bold.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'Barlow Condensed';src:url('fonts/BarlowCondensed-SemiBold.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:'Barlow Condensed';src:url('fonts/BarlowCondensed-Bold.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+:root{
+  --navy-deep:#051F4A;
+  --navy:#08306F;
+  --blue:#0B4FBF;
+  --yellow:#FFD645;
+  --yellow-bright:#FFE072;
+  --bg:#F5F7FA;
+  --bg-warm:#E8EDF4;
+  --ink:#131A26;
+  --ink-soft:#4A5464;
+  --line:#D3DBE6;
+  --white:#FFFFFF;
+  --shell:1200px;
+  --pad:40px;
+  --r-sm:8px;
+  --r-md:14px;
+  --r-lg:20px;
+  --shadow-sm:0 2px 10px rgba(5,31,74,.07);
+  --shadow-md:0 10px 30px rgba(5,31,74,.10);
+  --shadow-lg:0 20px 50px rgba(5,31,74,.16);
+  --ease:.28s cubic-bezier(.4,.14,.3,1);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:'Barlow',system-ui,-apple-system,'Segoe UI',sans-serif;
+  font-weight:400;
+  font-size:17px;
+  line-height:1.62;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3,h4{
+  font-family:'Barlow Condensed','Barlow Semi Condensed',sans-serif;
+  font-weight:700;
+  text-transform:uppercase;
+  line-height:1.04;
+  letter-spacing:.012em;
+  margin:0;
+}
+p{margin:0}
+ul{margin:0;padding-left:0;list-style:none}
+
+.shell{
+  width:100%;
+  max-width:var(--shell);
+  margin-left:auto;
+  margin-right:auto;
+  padding-left:var(--pad);
+  padding-right:var(--pad);
+  min-width:0;
+}
+
+.eyebrow{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.20em;
+  font-size:.85rem;
+  color:var(--blue);
+  margin-bottom:14px;
+}
+.eyebrow--onDark{color:var(--yellow)}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  font-family:'Barlow',sans-serif;
+  font-weight:700;
+  font-size:.97rem;
+  letter-spacing:.015em;
+  text-decoration:none;
+  border-radius:999px;
+  border:2px solid transparent;
+  padding-top:14px;
+  padding-bottom:14px;
+  padding-left:28px;
+  padding-right:28px;
+  cursor:pointer;
+  transition:transform var(--ease),box-shadow var(--ease),background-color var(--ease),color var(--ease),border-color var(--ease);
+  min-width:0;
+}
+.btn--primary{background:var(--yellow);color:var(--navy-deep);box-shadow:0 6px 18px rgba(255,214,69,.30)}
+.btn--primary:hover{background:var(--yellow-bright);transform:translateY(-2px);box-shadow:0 12px 26px rgba(255,214,69,.42)}
+.btn--ghost{background:transparent;color:var(--white);border-color:rgba(255,255,255,.42)}
+.btn--ghost:hover{border-color:var(--yellow);color:var(--yellow);transform:translateY(-2px)}
+.btn--solidNavy{background:var(--navy);color:var(--white)}
+.btn--solidNavy:hover{background:var(--blue);transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.btn svg{flex:none}
+
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:4px}
+.onDark :focus-visible,.nav :focus-visible,.hero :focus-visible{outline-color:var(--yellow)}
+
+/* ---------- NAV ---------- */
+.nav{
+  position:fixed;
+  top:0;left:0;right:0;
+  z-index:900;
+  background:rgba(5,31,74,.80);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(255,255,255,.09);
+  transition:background-color var(--ease),box-shadow var(--ease);
+}
+.nav.is-scrolled{background:rgba(5,31,74,.97);box-shadow:0 6px 26px rgba(5,31,74,.34)}
+.nav__inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  padding-top:12px;
+  padding-bottom:12px;
+  min-width:0;
+}
+.nav__brand{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0}
+.nav__icon{height:44px;width:auto;flex:none}
+.nav__words{display:flex;flex-direction:column;min-width:0}
+.nav__name{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:700;
+  text-transform:uppercase;
+  color:var(--white);
+  font-size:1.16rem;
+  line-height:1.02;
+  letter-spacing:.028em;
+  white-space:nowrap;
+}
+.nav__sub{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:600;
+  text-transform:uppercase;
+  color:var(--yellow);
+  font-size:.66rem;
+  line-height:1.2;
+  letter-spacing:.20em;
+  white-space:nowrap;
+}
+.nav__right{display:flex;align-items:center;gap:28px;min-width:0}
+.nav__links{display:flex;align-items:center;gap:26px;min-width:0}
+.nav__links a{
+  color:rgba(255,255,255,.87);
+  text-decoration:none;
+  font-weight:600;
+  font-size:.93rem;
+  letter-spacing:.012em;
+  position:relative;
+  padding-top:4px;padding-bottom:4px;
+  transition:color var(--ease);
+  white-space:nowrap;
+}
+.nav__links a::after{
+  content:'';position:absolute;left:0;bottom:0;height:2px;width:0;
+  background:var(--yellow);transition:width var(--ease);
+}
+.nav__links a:hover{color:var(--white)}
+.nav__links a:hover::after{width:100%}
+.nav__cta{
+  padding-top:11px;padding-bottom:11px;
+  padding-left:22px;padding-right:22px;
+  font-size:.9rem;
+}
+.nav__burger{
+  display:none;
+  width:46px;height:46px;
+  align-items:center;justify-content:center;
+  background:transparent;border:1px solid rgba(255,255,255,.30);
+  border-radius:var(--r-sm);cursor:pointer;flex:none;
+  transition:border-color var(--ease),background-color var(--ease);
+}
+.nav__burger:hover{border-color:var(--yellow)}
+.nav__burger span{
+  display:block;position:relative;width:21px;height:2px;background:var(--white);
+  transition:background-color var(--ease);
+}
+.nav__burger span::before,.nav__burger span::after{
+  content:'';position:absolute;left:0;width:21px;height:2px;background:var(--white);
+  transition:transform var(--ease),top var(--ease);
+}
+.nav__burger span::before{top:-7px}
+.nav__burger span::after{top:7px}
+.nav.is-open .nav__burger span{background:transparent}
+.nav.is-open .nav__burger span::before{top:0;transform:rotate(45deg)}
+.nav.is-open .nav__burger span::after{top:0;transform:rotate(-45deg)}
+.nav__panel{
+  display:none;
+  overflow:hidden;
+  max-height:0;
+  transition:max-height .34s cubic-bezier(.4,.14,.3,1);
+  background:rgba(5,31,74,.99);
+  border-top:1px solid rgba(255,255,255,.09);
+}
+.nav__panelInner{
+  padding-top:10px;padding-bottom:22px;
+  display:flex;flex-direction:column;gap:2px;
+}
+.nav__panelInner a{
+  color:var(--white);text-decoration:none;font-weight:600;font-size:1.02rem;
+  padding-top:13px;padding-bottom:13px;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.nav__panelInner a:last-of-type{border-bottom:0}
+.nav__panelCta{
+  margin-top:16px;width:100%;
+}
+
+/* ---------- HERO ---------- */
+.hero{
+  position:relative;
+  background:
+    radial-gradient(1100px 620px at 78% 12%,rgba(11,79,191,.42),transparent 62%),
+    linear-gradient(168deg,var(--navy) 0%,var(--navy-deep) 62%);
+  color:var(--white);
+  padding-top:152px;
+  padding-bottom:82px;
+  overflow:hidden;
+}
+.hero::after{
+  content:'';position:absolute;left:0;right:0;bottom:0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(255,214,69,.42),transparent);
+}
+.hero__grid{
+  display:grid;
+  grid-template-columns:1.06fr .94fr;
+  gap:60px;
+  align-items:center;
+  min-width:0;
+}
+.hero__copy{min-width:0}
+.hero__brand{
+  display:flex;align-items:center;gap:16px;
+  border-left:3px solid var(--yellow);
+  padding-left:18px;
+  margin-bottom:30px;
+  min-width:0;
+}
+.hero__brandIcon{height:56px;width:auto;flex:none}
+.hero__brandText{min-width:0}
+.hero__brandName{
+  font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;
+  font-size:clamp(1.35rem,2.4vw,1.85rem);line-height:1.02;letter-spacing:.022em;color:var(--white);
+}
+.hero__brandSub{
+  font-size:.86rem;color:rgba(255,255,255,.72);font-weight:500;letter-spacing:.03em;line-height:1.35;
+}
+.hero h1{
+  font-size:clamp(2.5rem,5.4vw,4.15rem);
+  letter-spacing:.004em;
+  margin-bottom:22px;
+}
+.hero h1 .accent{color:var(--yellow)}
+.hero__sub{
+  font-size:1.075rem;
+  color:rgba(255,255,255,.85);
+  max-width:53ch;
+  margin-bottom:32px;
+  min-width:0;
+}
+.hero__btns{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:42px;min-width:0}
+
+.hero__stats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  background:rgba(255,255,255,.055);
+  border:1px solid rgba(255,255,255,.13);
+  border-radius:var(--r-md);
+  overflow:hidden;
+  max-width:520px;
+  min-width:0;
+}
+.hero__stat{
+  padding-top:18px;padding-bottom:18px;
+  padding-left:16px;padding-right:16px;
+  text-align:center;
+  min-width:0;
+}
+.hero__stat + .hero__stat{border-left:1px solid rgba(255,255,255,.13)}
+.hero__statNum{
+  font-family:'Barlow Condensed',sans-serif;font-weight:700;
+  font-size:1.8rem;line-height:1;color:var(--yellow);margin-bottom:5px;
+}
+.hero__statLabel{
+  font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.10em;
+  color:rgba(255,255,255,.74);line-height:1.25;
+  overflow-wrap:anywhere;
+}
+
+.hero__media{position:relative;min-width:0}
+.hero__imgMain{
+  width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;
+  border-radius:var(--r-lg);
+  box-shadow:var(--shadow-lg);
+  border:1px solid rgba(255,255,255,.12);
+}
+.hero__imgInset{
+  position:absolute;
+  right:-22px;bottom:-34px;
+  width:47%;height:auto;
+  aspect-ratio:4/3;
+  object-fit:cover;
+  border-radius:var(--r-md);
+  border:5px solid var(--navy-deep);
+  box-shadow:var(--shadow-lg);
+}
+
+/* ---------- TRUST BAR ---------- */
+.trust{background:var(--yellow);color:var(--navy-deep)}
+.trust__grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:18px;
+  padding-top:20px;padding-bottom:20px;min-width:0;
+}
+.trust__item{
+  display:flex;align-items:center;gap:10px;
+  font-weight:700;font-size:.95rem;letter-spacing:.006em;min-width:0;
+}
+.trust__item svg{flex:none}
+
+/* ---------- REVIEWS ---------- */
+.reviews{background:var(--navy-deep);color:var(--white)}
+.reviews__grid{
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  gap:48px;align-items:center;
+  padding-top:52px;padding-bottom:52px;min-width:0;
+}
+.reviews__score{min-width:0}
+.reviews__pct{
+  font-family:'Barlow Condensed',sans-serif;font-weight:700;
+  font-size:3.5rem;line-height:1;color:var(--yellow);
+}
+.reviews__stars{display:flex;gap:3px;margin-top:8px}
+.reviews__count{
+  font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.11em;
+  color:rgba(255,255,255,.68);margin-top:9px;
+}
+.reviews__body{min-width:0}
+.reviews__body h2{font-size:1.85rem;margin-bottom:10px}
+.reviews__body p{color:rgba(255,255,255,.80);max-width:56ch;font-size:1.02rem}
+.reviews__action{min-width:0}
+
+/* ---------- SECTIONS ---------- */
+.section{padding-top:96px;padding-bottom:96px}
+.section--warm{background:var(--bg-warm)}
+.section--navy{background:var(--navy-deep);color:var(--white)}
+.section__head{max-width:760px;margin-bottom:52px;min-width:0}
+.section__head h2{font-size:clamp(2rem,3.7vw,2.85rem);margin-bottom:16px}
+.section__head p{color:var(--ink-soft);font-size:1.07rem}
+.section--navy .section__head p{color:rgba(255,255,255,.78)}
+
+/* ---------- SERVICES ---------- */
+.services{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:26px;min-width:0;
+}
+.svc{
+  position:relative;
+  background:var(--white);
+  border:1px solid var(--line);
+  border-radius:var(--r-lg);
+  overflow:hidden;
+  box-shadow:var(--shadow-sm);
+  transition:transform var(--ease),box-shadow var(--ease),border-color var(--ease);
+  min-width:0;
+  display:flex;flex-direction:column;
+}
+.svc:hover{transform:translateY(-5px);box-shadow:var(--shadow-md);border-color:#BECBDD}
+.svc--featured{grid-column:span 2;flex-direction:row}
+.svc__media{position:relative;overflow:hidden;flex:none}
+.svc--featured .svc__media{width:47%;min-width:0}
+.svc__img{width:100%;height:100%;object-fit:cover;transition:transform .55s cubic-bezier(.3,.1,.3,1)}
+.svc:not(.svc--featured) .svc__media{aspect-ratio:16/10}
+.svc:hover .svc__img{transform:scale(1.055)}
+.svc__badge{
+  position:absolute;top:0;left:0;
+  background:var(--navy-deep);
+  color:var(--yellow);
+  font-family:'Barlow Condensed',sans-serif;font-weight:700;
+  font-size:1.06rem;line-height:1;
+  padding-top:11px;padding-bottom:11px;
+  padding-left:15px;padding-right:15px;
+  border-bottom-right-radius:var(--r-md);
+  letter-spacing:.04em;
+}
+.svc__body{
+  padding-top:26px;padding-bottom:28px;
+  padding-left:26px;padding-right:26px;
+  min-width:0;display:flex;flex-direction:column;justify-content:center;flex:1;
+}
+.svc__body h3{font-size:1.42rem;margin-bottom:11px}
+.svc--featured .svc__body h3{font-size:1.72rem}
+.svc__body p{color:var(--ink-soft);font-size:.985rem}
+
+/* ---------- WHY US ---------- */
+.why__grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;min-width:0;
+}
+.why__copy{min-width:0}
+.why__copy h2{font-size:clamp(2rem,3.7vw,2.85rem);margin-bottom:16px}
+.why__lede{color:var(--ink-soft);margin-bottom:34px;font-size:1.07rem}
+.why__list{display:flex;flex-direction:column;gap:26px;min-width:0}
+.why__item{display:flex;gap:18px;min-width:0}
+.why__num{
+  font-family:'Barlow Condensed',sans-serif;font-weight:700;
+  font-size:1.1rem;line-height:1;color:var(--white);background:var(--blue);
+  width:38px;height:38px;flex:none;
+  display:flex;align-items:center;justify-content:center;border-radius:50%;
+}
+.why__text{min-width:0}
+.why__text h3{font-size:1.2rem;margin-bottom:6px}
+.why__text p{color:var(--ink-soft);font-size:.99rem}
+.why__media{position:relative;min-width:0}
+.why__media img{
+  width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;
+  border-radius:var(--r-lg);box-shadow:var(--shadow-md);
+}
+
+/* ---------- AREAS ---------- */
+.areas__tags{display:flex;flex-wrap:wrap;gap:12px;min-width:0}
+.areas__tag{
+  border:1px solid rgba(255,255,255,.24);
+  background:rgba(255,255,255,.06);
+  border-radius:999px;
+  padding-top:10px;padding-bottom:10px;
+  padding-left:22px;padding-right:22px;
+  font-weight:600;font-size:.94rem;
+  color:rgba(255,255,255,.90);
+  transition:background-color var(--ease),border-color var(--ease),transform var(--ease);
+  min-width:0;
+}
+.areas__tag:hover{background:rgba(255,214,69,.14);border-color:var(--yellow);transform:translateY(-2px)}
+
+/* ---------- GALLERY ---------- */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
+  min-width:0;
+}
+.gallery__item{
+  position:relative;
+  aspect-ratio:1/1;
+  overflow:hidden;
+  border-radius:var(--r-md);
+  box-shadow:var(--shadow-sm);
+  min-width:0;
+}
+.gallery__item img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .55s cubic-bezier(.3,.1,.3,1);
+}
+.gallery__item::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(5,31,74,.34),transparent 52%);
+  opacity:0;transition:opacity var(--ease);
+}
+.gallery__item:hover img{transform:scale(1.07)}
+.gallery__item:hover::after{opacity:1}
+
+/* ---------- CONTACT ---------- */
+.contact__grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;min-width:0;
+}
+.contact__copy{min-width:0}
+.contact__copy h2{font-size:clamp(2rem,3.7vw,2.85rem);margin-bottom:16px}
+.contact__lede{color:var(--ink-soft);margin-bottom:34px;font-size:1.07rem}
+.contact__list{display:flex;flex-direction:column;gap:2px;min-width:0}
+.contact__row{
+  display:flex;gap:16px;align-items:flex-start;
+  padding-top:18px;padding-bottom:18px;
+  border-bottom:1px solid var(--line);
+  min-width:0;
+}
+.contact__row:last-child{border-bottom:0}
+.contact__icon{
+  width:42px;height:42px;flex:none;
+  display:flex;align-items:center;justify-content:center;
+  background:var(--white);border:1px solid var(--line);border-radius:50%;
+  color:var(--blue);
+}
+.contact__rowBody{min-width:0}
+.contact__label{
+  font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.13em;
+  color:var(--ink-soft);margin-bottom:3px;
+}
+.contact__value{
+  font-weight:600;font-size:1.05rem;color:var(--ink);
+  text-decoration:none;overflow-wrap:anywhere;
+  transition:color var(--ease);
+}
+a.contact__value:hover{color:var(--blue)}
+
+.contact__panel{
+  background:var(--navy-deep);
+  color:var(--white);
+  border-radius:var(--r-lg);
+  padding-top:44px;padding-bottom:44px;
+  padding-left:40px;padding-right:40px;
+  box-shadow:var(--shadow-md);
+  min-width:0;
+}
+.contact__panel h3{font-size:1.72rem;margin-bottom:14px}
+.contact__panel p{color:rgba(255,255,255,.80);margin-bottom:28px}
+.contact__panel .btn{width:100%}
+.contact__panelNote{
+  margin-top:22px;
+  font-size:.86rem;
+  color:rgba(255,255,255,.62);
+  margin-bottom:0;
+}
+
+/* ---------- FOOTER ---------- */
+.footer{background:var(--navy-deep);color:var(--white)}
+.footer__grid{
+  display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:48px;
+  padding-top:66px;padding-bottom:52px;min-width:0;
+}
+.footer__brand{display:flex;align-items:center;gap:13px;margin-bottom:18px;min-width:0}
+.footer__icon{height:48px;width:auto;flex:none}
+.footer__name{
+  font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;
+  font-size:1.28rem;line-height:1.02;letter-spacing:.026em;color:var(--white);
+}
+.footer__sub{
+  font-family:'Barlow Condensed',sans-serif;font-weight:600;text-transform:uppercase;
+  font-size:.7rem;letter-spacing:.2em;color:var(--yellow);line-height:1.2;
+}
+.footer__blurb{color:rgba(255,255,255,.68);font-size:.96rem;max-width:42ch}
+.footer h4{
+  font-size:1rem;letter-spacing:.13em;color:var(--yellow);margin-bottom:18px;
+}
+.footer__links{display:flex;flex-direction:column;gap:11px;min-width:0}
+.footer__links a{
+  color:rgba(255,255,255,.76);text-decoration:none;font-size:.96rem;
+  transition:color var(--ease);overflow-wrap:anywhere;
+}
+.footer__links a:hover{color:var(--yellow)}
+.footer__bar{
+  border-top:1px solid rgba(255,255,255,.12);
+  padding-top:22px;padding-bottom:22px;
+  display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;
+  min-width:0;
+}
+.footer__bar p{font-size:.86rem;color:rgba(255,255,255,.55);min-width:0}
+.footer__bar a{color:rgba(255,255,255,.55);text-decoration:none}
+.footer__bar a:hover{color:var(--yellow)}
+
+/* ---------- REVEAL ---------- */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .62s ease,transform .62s cubic-bezier(.3,.1,.3,1)}
+.reveal.is-in{opacity:1;transform:none}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width:1080px){
+  .hero__grid{gap:40px}
+  .services{grid-template-columns:repeat(2,1fr)}
+  .svc--featured{grid-column:span 2}
+  .reviews__grid{grid-template-columns:auto 1fr;gap:32px}
+  .reviews__action{grid-column:1 / -1}
+}
+@media (max-width:900px){
+  :root{--pad:28px}
+  .nav__links{display:none}
+  .nav__cta{display:none}
+  .nav__burger{display:flex}
+  .nav__panel{display:block}
+  .nav__icon{height:38px}
+  .hero{padding-top:128px;padding-bottom:64px}
+  .hero__grid{grid-template-columns:1fr;gap:46px}
+  .hero__sub{max-width:none}
+  .why__grid{grid-template-columns:1fr;gap:44px}
+  .why__media{order:-1}
+  .why__media img{aspect-ratio:16/10}
+  .contact__grid{grid-template-columns:1fr;gap:40px}
+  .footer__grid{grid-template-columns:1fr;gap:38px;padding-top:52px}
+  .section{padding-top:74px;padding-bottom:74px}
+  .trust__grid{grid-template-columns:repeat(2,1fr);gap:14px}
+}
+@media (max-width:768px){
+  .gallery{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:680px){
+  .hero__imgInset{display:none}
+  .svc--featured{flex-direction:column;grid-column:span 2}
+  .svc--featured .svc__media{width:100%;aspect-ratio:16/10}
+  .svc--featured .svc__body h3{font-size:1.42rem}
+}
+@media (max-width:640px){
+  :root{--pad:20px}
+  .services{grid-template-columns:1fr}
+  .svc--featured{grid-column:span 1}
+  .reviews__grid{grid-template-columns:1fr;gap:26px;padding-top:42px;padding-bottom:42px}
+  .reviews__action{grid-column:auto}
+  .contact__panel{padding-left:26px;padding-right:26px;padding-top:34px;padding-bottom:34px}
+  .hero__stat{padding-top:12px;padding-bottom:12px;padding-left:8px;padding-right:8px}
+  .hero__statNum{font-size:1.5rem}
+  .hero__statLabel{font-size:.66rem;letter-spacing:.06em}
+  .hero__btns .btn{width:100%}
+  .section__head{margin-bottom:38px}
+}
+@media (max-width:400px){
+  .nav__icon{height:32px}
+  .nav__name{font-size:1.02rem}
+  .nav__sub{font-size:.6rem;letter-spacing:.16em}
+  .hero__brandIcon{height:46px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="shell nav__inner">
+    <a class="nav__brand" href="#top" aria-label="Wrekin &amp; Salopia Home Improvements — home">
+      <img class="nav__icon" src="images/icon-yellow.png" alt="" width="671" height="369">
+      <span class="nav__words">
+        <span class="nav__name">Wrekin &amp; Salopia</span>
+        <span class="nav__sub">Home Improvements</span>
+      </span>
+    </a>
+    <div class="nav__right">
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#services">Services</a>
+        <a href="#why">Why Us</a>
+        <a href="#areas">Areas</a>
+        <a href="#gallery">Our Work</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn btn--primary nav__cta" href="https://wa.me/447496273262?text=Hi%20Wrekin%20%26%20Salopia%2C%20I%20found%20you%20through%20your%20website%20and%20I%27d%20like%20a%20quote%20for..." target="_blank" rel="noopener">Message Us Now</a>
+      <button class="nav__burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navPanel">
+        <span></span>
+      </button>
+    </div>
+  </div>
+  <div class="nav__panel" id="navPanel">
+    <div class="shell nav__panelInner">
+      <a href="#services">Services</a>
+      <a href="#why">Why Us</a>
+      <a href="#areas">Areas</a>
+      <a href="#gallery">Our Work</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn--primary nav__panelCta" href="https://wa.me/447496273262?text=Hi%20Wrekin%20%26%20Salopia%2C%20I%20found%20you%20through%20your%20website%20and%20I%27d%20like%20a%20quote%20for..." target="_blank" rel="noopener">Message Us Now</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="shell hero__grid">
+    <div class="hero__copy">
+      <div class="hero__brand">
+        <img class="hero__brandIcon" src="images/icon-yellow.png" alt="" width="671" height="369">
+        <div class="hero__brandText">
+          <div class="hero__brandName">Wrekin &amp; Salopia</div>
+          <div class="hero__brandSub">Roofing &amp; Home Improvements &middot; Shrewsbury</div>
+        </div>
+      </div>
+      <h1>Roofing, rooflines &amp; <span class="accent">everything after</span></h1>
+      <p class="hero__sub">Wrekin &amp; Salopia are Shrewsbury roofers first — pitched roofs, flat roofs, fascias, soffits and guttering. We also cover glazing and bathrooms, so one team can handle the whole job rather than four.</p>
+      <div class="hero__btns">
+        <a class="btn btn--primary" href="https://wa.me/447496273262?text=Hi%20Wrekin%20%26%20Salopia%2C%20I%20found%20you%20through%20your%20website%20and%20I%27d%20like%20a%20quote%20for..." target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.42a8.19 8.19 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.14.16-.29.18-.54.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.17-.47-.29Z"/></svg>
+          Message Us Now
+        </a>
+        <a class="btn btn--ghost" href="#gallery">View Our Work</a>
+      </div>
+      <div class="hero__stats">
+        <div class="hero__stat">
+          <div class="hero__statNum">100%</div>
+          <div class="hero__statLabel">Recommend Us</div>
+        </div>
+        <div class="hero__stat">
+          <div class="hero__statNum">6</div>
+          <div class="hero__statLabel">Trades Covered</div>
+        </div>
+        <div class="hero__stat">
+          <div class="hero__statNum">SY1</div>
+          <div class="hero__statLabel">Shrewsbury Based</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero__media">
+      <img class="hero__imgMain" src="images/brand_new_roof.jpg" alt="Newly finished pitched tiled roof by Wrekin &amp; Salopia" width="1200" height="900">
+      <img class="hero__imgInset" src="images/roof_4.jpg" alt="New fascias, soffits and guttering fitted to a Shrewsbury home" width="1200" height="1600" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<section class="trust">
+  <div class="shell trust__grid">
+    <div class="trust__item">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+      Free, no-pressure quotes
+    </div>
+    <div class="trust__item">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+      Fully insured team
+    </div>
+    <div class="trust__item">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+      Honest, upfront quoting
+    </div>
+    <div class="trust__item">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+      Shrewsbury based, local team
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews">
+  <div class="shell reviews__grid">
+    <div class="reviews__score">
+      <div class="reviews__pct">100%</div>
+      <div class="reviews__stars" aria-hidden="true">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="#FFD645"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="#FFD645"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="#FFD645"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="#FFD645"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="#FFD645"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+      </div>
+      <div class="reviews__count">Based on 11 reviews</div>
+    </div>
+    <div class="reviews__body">
+      <h2>100% of reviewers recommend Wrekin &amp; Salopia</h2>
+      <p>Our reviews live on our Facebook page rather than on here, so you can read them in full and see who wrote them. Have a look through and judge the work for yourself.</p>
+    </div>
+    <div class="reviews__action">
+      <a class="btn btn--primary" href="https://www.facebook.com/profile.php?id=61574992336180" target="_blank" rel="noopener">Read Our Reviews</a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+  <div class="shell">
+    <div class="section__head reveal">
+      <div class="eyebrow">What We Do</div>
+      <h2>Roofing first — and everything that goes with it</h2>
+      <p>Roofing is where Wrekin &amp; Salopia started and it is still the bulk of what we do. Rooflines, glazing and interiors came later because customers kept asking — so now you can get the lot done by one team instead of lining up four. We cover all aspects of trade work, domestic and commercial.</p>
+    </div>
+    <div class="services">
+
+      <article class="svc svc--featured reveal">
+        <div class="svc__media">
+          <span class="svc__badge">01</span>
+          <img class="svc__img" src="images/new_roof_2.jpg" alt="Full re-roof with new tiles on a Shrewsbury property" width="1600" height="900" loading="lazy">
+        </div>
+        <div class="svc__body">
+          <h3>Pitched Roofs &amp; Re-Roofs</h3>
+          <p>The core of what Wrekin &amp; Salopia do. Full re-roofs, new tiling and slating, storm damage repairs, ridge and verge work, valleys, felt and batten replacement, and one-off repairs where a roof has a specific fault rather than needing stripping. We work in tile and natural slate, strip back to the timbers so we can see what we are actually dealing with, and put right anything hidden underneath before the new covering goes on. Every roof gets scaffolded properly and left watertight at the end of each day.</p>
+        </div>
+      </article>
+
+      <article class="svc reveal">
+        <div class="svc__media">
+          <span class="svc__badge">02</span>
+          <img class="svc__img" src="images/garage_roof.jpg" alt="New EPDM rubber flat roof on a garage" width="1600" height="1200" loading="lazy">
+        </div>
+        <div class="svc__body">
+          <h3>Flat Roofing</h3>
+          <p>EPDM rubber and felt systems for garages, extensions and dormers. Properly falls-checked so water runs off rather than sitting, with new trims and edge detail fitted as part of the job.</p>
+        </div>
+      </article>
+
+      <article class="svc reveal">
+        <div class="svc__media">
+          <span class="svc__badge">03</span>
+          <img class="svc__img" src="images/roof_4.jpg" alt="New fascias, soffits and black guttering" width="1200" height="1600" loading="lazy">
+        </div>
+        <div class="svc__body">
+          <h3>Fascias, Soffits &amp; Guttering</h3>
+          <p>Full roofline replacement in uPVC. Rotten timber removed, new boards and vented soffits fitted, and guttering run and sealed so the water goes where it should instead of down the wall.</p>
+        </div>
+      </article>
+
+      <article class="svc reveal">
+        <div class="svc__media">
+          <span class="svc__badge">04</span>
+          <img class="svc__img" src="images/roof_dormer.jpg" alt="Lead flashing dressed around a dormer and chimney stack" width="1600" height="1200" loading="lazy">
+        </div>
+        <div class="svc__body">
+          <h3>Chimneys &amp; Leadwork</h3>
+          <p>Repointing, rebuilds, flue liners, cappings and removals, plus code-appropriate lead flashings to chimneys, abutments and valleys — the details that cause most of the leaks we get called out to.</p>
+        </div>
+      </article>
+
+      <article class="svc reveal">
+        <div class="svc__media">
+          <span class="svc__badge">05</span>
+          <img class="svc__img" src="images/bifold_door.jpg" alt="Aluminium bifold doors fitted to a brick barn conversion" width="1600" height="1200" loading="lazy">
+        </div>
+        <div class="svc__body">
+          <h3>Glazing — Bifolds, Doors &amp; Windows</h3>
+          <p>Bifold and patio doors, replacement windows and external doors. Openings formed and made good where needed, so the brickwork and plaster are finished rather than left for someone else.</p>
+        </div>
+      </article>
+
+      <article class="svc reveal">
+        <div class="svc__media">
+          <span class="svc__badge">06</span>
+          <img class="svc__img" src="images/bathroom_3.jpg" alt="Fitted bathroom with shower enclosure and marble-effect panelling" width="1200" height="1600" loading="lazy">
+        </div>
+        <div class="svc__body">
+          <h3>Bathrooms &amp; Interiors</h3>
+          <p>Full bathroom fit-outs and general interior work, start to finish.</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="section section--warm" id="why">
+  <div class="shell why__grid">
+    <div class="why__copy reveal">
+      <div class="eyebrow">Why Wrekin &amp; Salopia</div>
+      <h2>A small team you can actually get hold of</h2>
+      <p class="why__lede">Wrekin &amp; Salopia is Will and Tom and the lads who work with them. That is deliberate — it keeps the standard consistent and it means there is nobody to hide behind if something is not right.</p>
+      <div class="why__list">
+        <div class="why__item">
+          <div class="why__num">1</div>
+          <div class="why__text">
+            <h3>You deal with Will or Tom</h3>
+            <p>The person who quotes your job is the person running it. No call centre, no salesman, no being passed around.</p>
+          </div>
+        </div>
+        <div class="why__item">
+          <div class="why__num">2</div>
+          <div class="why__text">
+            <h3>Honest about the price</h3>
+            <p>We quote properly after looking at the job, in writing. Roofs throw up surprises once they're opened up — if we find something, we show you and agree it before we carry on, so you're never in the dark and never billed for work you didn't approve.</p>
+          </div>
+        </div>
+        <div class="why__item">
+          <div class="why__num">3</div>
+          <div class="why__text">
+            <h3>We clean up after ourselves</h3>
+            <p>Sheets down, waste taken away, drive swept. You should not be able to tell we were there apart from the work itself.</p>
+          </div>
+        </div>
+        <div class="why__item">
+          <div class="why__num">4</div>
+          <div class="why__text">
+            <h3>We are ten minutes away</h3>
+            <p>Based on Coton Crescent in Shrewsbury. If something needs looking at after we have finished, we are local enough to come back out.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="why__media reveal">
+      <img src="images/scaffold_cottage.jpg" alt="Wrekin &amp; Salopia vans and scaffolding outside a Shropshire cottage re-roof" width="960" height="720" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- AREAS -->
+<section class="section section--navy" id="areas">
+  <div class="shell">
+    <div class="section__head reveal">
+      <div class="eyebrow eyebrow--onDark">Where We Work</div>
+      <h2>Shrewsbury and across Shropshire</h2>
+      <p>We are based in Shrewsbury and cover the town and the surrounding villages. If you are not on this list it is worth asking — we travel for the right job.</p>
+    </div>
+    <div class="areas__tags reveal">
+      <span class="areas__tag">Shrewsbury</span>
+      <span class="areas__tag">Telford</span>
+      <span class="areas__tag">Wellington</span>
+      <span class="areas__tag">Bayston Hill</span>
+      <span class="areas__tag">Bicton</span>
+      <span class="areas__tag">Shawbury</span>
+      <span class="areas__tag">Wem</span>
+      <span class="areas__tag">Baschurch</span>
+      <span class="areas__tag">Pontesbury</span>
+      <span class="areas__tag">Minsterley</span>
+      <span class="areas__tag">Church Stretton</span>
+      <span class="areas__tag">Atcham</span>
+      <span class="areas__tag">Cross Houses</span>
+      <span class="areas__tag">Ford</span>
+      <span class="areas__tag">Nesscliffe</span>
+      <span class="areas__tag">Much Wenlock</span>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="section" id="gallery">
+  <div class="shell">
+    <div class="section__head reveal">
+      <div class="eyebrow">Our Work</div>
+      <h2>Recent jobs around Shrewsbury</h2>
+      <p>Roofs, rooflines, glazing and interiors — all our own work, photographed on site.</p>
+    </div>
+    <div class="gallery reveal">
+      <div class="gallery__item"><img src="images/new_roof_2.jpg" alt="New tiled roof finished with ridge tiles" width="1600" height="900" loading="lazy"></div>
+      <div class="gallery__item"><img src="images/roof_slate_detail.jpg" alt="Natural slate roof detail" width="1600" height="1200" loading="lazy"></div>
+      <div class="gallery__item"><img src="images/roof_slate_terrace.jpg" alt="Slate roof on a Shrewsbury terrace" width="960" height="720" loading="lazy"></div>
+      <div class="gallery__item"><img src="images/roof_4.jpg" alt="New fascia, soffit and guttering" width="1200" height="1600" loading="lazy"></div>
+      <div class="gallery__item"><img src="images/garage_roof.jpg" alt="EPDM rubber flat roof on a garage" width="1600" height="1200" loading="lazy"></div>
+      <div class="gallery__item"><img src="images/roof_battens.jpg" alt="Roof stripped back to new battens mid-job" width="960" height="720" loading="lazy"></div>
+      <div class="gallery__item"><img src="images/bathroom_3.jpg" alt="Fitted bathroom with shower enclosure" width="1200" height="1600" loading="lazy"></div>
+      <div class="gallery__item"><img src="images/roof_dormer.jpg" alt="Dormer roof works with lead flashing" width="1600" height="1200" loading="lazy"></div>
+      <div class="gallery__item"><img src="images/roof_slate_closeup.jpg" alt="Close-up of new slate courses" width="960" height="720" loading="lazy"></div>
+      <div class="gallery__item"><img src="images/scaffold_cottage.jpg" alt="Scaffolded cottage re-roof with company vans" width="960" height="720" loading="lazy"></div>
+      <div class="gallery__item"><img src="images/bifold_door.jpg" alt="Bifold doors in a brick exterior wall" width="1600" height="1200" loading="lazy"></div>
+      <div class="gallery__item"><img src="images/bifold_open_garden.jpg" alt="Bifold doors opened onto the garden" width="1600" height="1200" loading="lazy"></div>
+      <div class="gallery__item"><img src="images/bifold_barn.jpg" alt="Bifold door installation at a barn conversion" width="1600" height="1200" loading="lazy"></div>
+      <div class="gallery__item"><img src="images/bifold_interior.jpg" alt="Bifold doors seen from inside" width="1200" height="1600" loading="lazy"></div>
+      <div class="gallery__item"><img src="images/bathroom_marble.jpg" alt="Bathroom with marble-effect wall panelling" width="1200" height="1600" loading="lazy"></div>
+      <div class="gallery__item"><img src="images/bathroom_suite.jpg" alt="Completed bathroom suite" width="1200" height="1600" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section section--warm" id="contact">
+  <div class="shell contact__grid">
+    <div class="contact__copy reveal">
+      <div class="eyebrow">Get In Touch</div>
+      <h2>Tell us about the job</h2>
+      <p class="contact__lede">Send a message with a rough idea of what you need and a photo if you have one. Will picks these up and will come back to you to arrange a look and a proper quote.</p>
+      <div class="contact__list">
+        <div class="contact__row">
+          <div class="contact__icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+          </div>
+          <div class="contact__rowBody">
+            <div class="contact__label">Will &middot; Primary</div>
+            <a class="contact__value" href="tel:+447496273262">07496 273262</a>
+          </div>
+        </div>
+        <div class="contact__row">
+          <div class="contact__icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+          </div>
+          <div class="contact__rowBody">
+            <div class="contact__label">Tom</div>
+            <a class="contact__value" href="tel:+447946705918">07946 705918</a>
+          </div>
+        </div>
+        <div class="contact__row">
+          <div class="contact__icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          </div>
+          <div class="contact__rowBody">
+            <div class="contact__label">Email</div>
+            <a class="contact__value" href="mailto:wshomeimprovements@hotmail.com">wshomeimprovements@hotmail.com</a>
+          </div>
+        </div>
+        <div class="contact__row">
+          <div class="contact__icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="contact__rowBody">
+            <div class="contact__label">Where We Are</div>
+            <div class="contact__value">1 Coton Crescent, Shrewsbury, Shropshire, SY1 2NY</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contact__panel reveal">
+      <h3>Message us on WhatsApp</h3>
+      <p>Quickest way to reach us. It opens a message to Will with a line already written — add what you need and send.</p>
+      <a class="btn btn--primary" href="https://wa.me/447496273262?text=Hi%20Wrekin%20%26%20Salopia%2C%20I%20found%20you%20through%20your%20website%20and%20I%27d%20like%20a%20quote%20for..." target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.42a8.19 8.19 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.14.16-.29.18-.54.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.17-.47-.29Z"/></svg>
+        Message Us Now
+      </a>
+      <p class="contact__panelNote">Prefer to talk? Ring Will on 07496 273262. If we are up a roof we will call you straight back.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="shell">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__brand">
+          <img class="footer__icon" src="images/icon-yellow.png" alt="" width="671" height="369">
+          <div>
+            <div class="footer__name">Wrekin &amp; Salopia</div>
+            <div class="footer__sub">Home Improvements</div>
+          </div>
+        </div>
+        <p class="footer__blurb">Built on Reputation. Roofing, rooflines, glazing and interiors across Shrewsbury and Shropshire.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <div class="footer__links">
+          <a href="#services">Pitched Roofs &amp; Re-Roofs</a>
+          <a href="#services">Flat Roofing</a>
+          <a href="#services">Fascias, Soffits &amp; Guttering</a>
+          <a href="#services">Chimneys &amp; Leadwork</a>
+          <a href="#services">Glazing</a>
+          <a href="#services">Bathrooms &amp; Interiors</a>
+        </div>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <div class="footer__links">
+          <a href="tel:+447496273262">Will &mdash; 07496 273262</a>
+          <a href="tel:+447946705918">Tom &mdash; 07946 705918</a>
+          <a href="mailto:wshomeimprovements@hotmail.com">wshomeimprovements@hotmail.com</a>
+          <a href="https://www.facebook.com/profile.php?id=61574992336180" target="_blank" rel="noopener">Find us on Facebook</a>
+          <a href="#contact">1 Coton Crescent, Shrewsbury, SY1 2NY</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bar">
+      <p>&copy; <span id="year">2026</span> Wrekin &amp; Salopia Home Improvements. All rights reserved.</p>
+      <p>Website by <a href="https://twdwebsites.co.uk" target="_blank" rel="noopener">TWD</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var nav = document.getElementById('nav');
+  var burger = document.getElementById('burger');
+  var panel = document.getElementById('navPanel');
+
+  function closeMenu(){
+    nav.classList.remove('is-open');
+    burger.setAttribute('aria-expanded','false');
+    burger.setAttribute('aria-label','Open menu');
+    panel.style.maxHeight = '0px';
+  }
+  function openMenu(){
+    nav.classList.add('is-open');
+    burger.setAttribute('aria-expanded','true');
+    burger.setAttribute('aria-label','Close menu');
+    panel.style.maxHeight = panel.scrollHeight + 'px';
+  }
+  burger.addEventListener('click', function(){
+    if (nav.classList.contains('is-open')) { closeMenu(); } else { openMenu(); }
+  });
+  panel.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', closeMenu);
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && nav.classList.contains('is-open')) { closeMenu(); }
+  });
+  window.addEventListener('resize', function(){
+    if (window.innerWidth > 900 && nav.classList.contains('is-open')) { closeMenu(); }
+    else if (nav.classList.contains('is-open')) { panel.style.maxHeight = panel.scrollHeight + 'px'; }
+  });
+
+  function onScroll(){
+    if (window.scrollY > 24) { nav.classList.add('is-scrolled'); }
+    else { nav.classList.remove('is-scrolled'); }
+  }
+  onScroll();
+  window.addEventListener('scroll', onScroll, {passive:true});
+
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var items = document.querySelectorAll('.reveal');
+  if (reduce || !('IntersectionObserver' in window)) {
+    items.forEach(function(el){ el.classList.add('is-in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting) { en.target.classList.add('is-in'); io.unobserve(en.target); }
+      });
+    }, {rootMargin:'0px 0px -8% 0px', threshold:0.06});
+    items.forEach(function(el){ io.observe(el); });
+  }
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+})();
+</script>
+
+</body>
+</html>
